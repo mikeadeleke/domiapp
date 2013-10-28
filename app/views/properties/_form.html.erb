@@ -1,0 +1,22 @@
+<%= simple_form_for @property do |f| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% @property.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :title, placeholder: "1600 Pennsylvania Ave NW, Washington" %>
+  <%= f.input :price, placeholder: "$500 per month" %>
+  <%= f.input :landlord_rating, placeholder: "7 out of 10", collection: 1..10 %>
+  <%= f.input :additional, placeholder: "My landlord is the greatest landlord of all time. Well, there was that time..." %>
+
+  <div class="actions">
+    <%= f.button :submit, class: "btn btn-large btn-success" %>
+  </div>
+<% end %>
