@@ -1,12 +1,15 @@
 <h1>Listing properties</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
       <th>Price</th>
       <th>Landlord rating</th>
       <th>Additonal(optional) </th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -26,5 +29,5 @@
 </table>
 
 <br />
+<%= button_to "New Property", new_property_path, :method => "get" %>
 
-<%= link_to 'New Property', new_property_path %>

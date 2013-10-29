@@ -1,3 +1,10 @@
+<% @properties.each do |property| %>
+	<%= @property.title %>
+	<%= property.price %>
+	<%= property.landlord_rating %>
+	<%= property.additional %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 
