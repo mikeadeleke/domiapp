@@ -1,9 +1,9 @@
-<% @properties.each do |property| %>
-	<%= @property.title %>
-	<%= property.price %>
-	<%= property.landlord_rating %>
-	<%= property.additional %>
-<% end %>
+<div class="properties">
+	<li><%= @property.title %></li>
+	<li><%= @property.price %></li>
+	<li><%= @property.landlord_rating %></li>
+	<li><%= @property.additional %></li>
+</div>
 
 <p id="notice"><%= notice %></p>
 
